@@ -20,8 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ae\avidus.h" />
+    <ClInclude Include="src\ae\event\events.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ae\event\events.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
