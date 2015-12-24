@@ -9,7 +9,7 @@ namespace ae {
 	private:
 		friend class Avidus;
 
-		typedef void(*onEvent)();
+		typedef void(*onEvent)(sf::Event);
 
 		sf::Event::EventType m_Type;
 		std::list<onEvent> m_List;
@@ -18,5 +18,7 @@ namespace ae {
 		~EventHandler();
 
 		void addListener(onEvent listener);
+	private:
+		void dispatch(sf::Event event);
 	};
 }

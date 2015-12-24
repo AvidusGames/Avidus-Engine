@@ -18,12 +18,18 @@ public:
 		delete shape;
 	}
 
+	void onEventClosed(sf::Event event) {
+		window->close();
+		std::cout << "Closed!" << std::endl;
+	}
+
 	void Init() override {
 		window = CreateWindow("SFML Test", 200, 200);
 		shape = new CircleShape(100.f);
 		shape->setFillColor(Color::Red);
-	}
 
+		//Closed->addListener(&onEventClosed);
+	}
 	void Tick() override {
 		std::cout << "FPS: " << GetFPS() << std::endl << "UPS: " << GetUPS() << std::endl;
 	}
