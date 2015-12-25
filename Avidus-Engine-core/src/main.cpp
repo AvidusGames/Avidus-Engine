@@ -24,11 +24,13 @@ public:
 	}
 
 	void Init() override {
+		using namespace std::placeholders;
+
 		window = CreateWindow("SFML Test", 200, 200);
 		shape = new CircleShape(100.f);
 		shape->setFillColor(Color::Red);
 
-		//Closed->addListener(&onEventClosed);
+		Closed->addListener(std::bind(&Game::onEventClosed, this, _1));
 	}
 	void Tick() override {
 		std::cout << "FPS: " << GetFPS() << std::endl << "UPS: " << GetUPS() << std::endl;

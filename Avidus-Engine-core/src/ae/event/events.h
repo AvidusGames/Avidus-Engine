@@ -1,6 +1,7 @@
 #pragma once
 
 #include <list>
+#include <functional>
 #include <SFML\Graphics.hpp>
 
 namespace ae {
@@ -9,7 +10,7 @@ namespace ae {
 	private:
 		friend class Avidus;
 
-		typedef void(*onEvent)(sf::Event);
+		typedef std::function<void(sf::Event)> onEvent;
 
 		sf::Event::EventType m_Type;
 		std::list<onEvent> m_List;
