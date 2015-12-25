@@ -2,7 +2,8 @@
 
 #include <list>
 #include <functional>
-#include <SFML\Graphics.hpp>
+#include <SFML/Window/Event.hpp>
+#include <SFML/Window/Window.hpp>
 
 namespace ae {
 

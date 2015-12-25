@@ -37,7 +37,11 @@ public:
 	}
 
 	void Update() override {
+		using sf::Keyboard;
 
+		if (isKeyPressed(Keyboard::Key::A)) {
+			std::cout << "Left" << std::endl;
+		}
 	}
 
 	void Draw() override {
