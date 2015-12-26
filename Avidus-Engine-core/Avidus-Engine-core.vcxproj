@@ -19,11 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ae\avidus.h" />
-    <ClInclude Include="src\ae\event\events.h" />
+    <ClInclude Include="src\ae\ae.h" />
+    <ClInclude Include="src\ae\classes\AssetManager.h" />
+    <ClInclude Include="src\ae\event\Events.h" />
+    <ClInclude Include="src\ae\interfaces\IAssetHandler.h" />
+    <ClInclude Include="src\ae\interfaces\TAsset.h" />
+    <ClInclude Include="src\ae\interfaces\TAssetHandler.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ae\event\events.cpp" />
+    <ClCompile Include="src\ae\classes\AssetManager.cpp" />
+    <ClCompile Include="src\ae\event\Events.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -1,5 +1,5 @@
-#include <ae/avidus.h>
-#include <ae/event/events.h>
+#include <ae/ae.h>
+#include <ae/event/Events.h>
 #include <iostream>
 
 using namespace ae;
